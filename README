@@ -1,0 +1,74 @@
+Author: Prokopiou Konstantinos
+Software: RuLieR (Rule-Line eRasor)
+Version: 1.0
+Date: 17/03/2012
+Licence: GPLv2
+
+---------------------------------------------------------------------------
+------------------------ INTRODUCTION -------------------------------------
+---------------------------------------------------------------------------
+  This Software is the product for the needs of the thesis with the title:
+"Analysis, Design and Implementations of an Intelligent Interactive
+System for removing rule-lines from document images."
+Hellenic Open University, May 2012
+
+  What is the problem that led to creating RuLier?
+
+  The presence of ruling lines is very common in document images in order
+to help the writer to keep certain rules e.g. text in order, text inside 
+specific area etc. However, the ruling lines make more difficult the
+procedures, like document image processing or OCR. Thus, a pre‐processing 
+step dealing with ruling line detection and removal is required in many cases.
+
+  A variety of algorithms for ruling line detection and removal have
+been proposed. These algorithm must solve the following problems
+ * Detect the position of the rule lines on the document image.
+ * Usually the document images are monochromatic, so there is no
+   discrimination between pixels belonging to the rule lines and
+   those belonging to the text characters.
+ * Rule lines can vary in thickness, may be skewed or be broken
+ * When lines and text are overlapped, a decision has to be made if a
+   black pixel belongs to a line or a character, in order to turn it off
+   or keep it on, respectively.
+
+   The above issues are not trivial at all, especially for images 
+  created from handwritten documents. So the algorithms, must
+  have a complex logic use parameterization, to be able to adopt
+  to the great variety of document images.
+  
+    Due to the parameterized nature of the algorithms, we must
+  have an objective method of evaluating the effectiveness of
+  the algorithms. Also, we need an automatized way to select
+  the best values for the parameters for a collection of images.
+
+  What RuLieR can do?
+
+  RuLieR is a human computer interaction system that performs the tasks:
+  * Image Selection and Display, including zoom in, zoom out,
+  * Selection/Insertion of ruling line detection and removal algorithm,
+  * Parameter configuration by using an artificial intelligence algorithm,
+  * Parameter configuration by user feedback,
+  * Algorithm application to a batch of files after the final configuration.
+  * Implements three algorithms for rule line detection and removal
+  * It is extensible and allows adding more algorithms.
+
+---------------------------------------------------------------------------
+------------------------ INSTALLATION -------------------------------------
+---------------------------------------------------------------------------
+From the ./releases directory download rulier-1.0.tbz2
+1. Uncompress the file:
+   tar -xvjf rulier-1.0.tbz2
+2. A directory named 'RuLieR'. The base directory named 'rulier' is created.
+   Go inside the directory, and then run the file:
+   * run.sh if your operating system is *NIX (such as, Linux)
+   * run.bat if your operating system is Windows
+
+Note in order to be able to run the program you need
+* The Java Runtime Environment (preferable version 6 or 7)
+* In order to be able to open and save in image formats such as TIFF
+  you need jai-imageio. Downloable from:
+  http://download.java.net/media/jai-imageio/builds/release/1.1/
+
+  Some of the algorithms can use a great deal of memory, 
+  so it's recommended a system with a memory at least 4GB
+
